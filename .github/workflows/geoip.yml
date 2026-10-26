@@ -1,0 +1,34 @@
+   name: Actualizar listas GeoIP (LACNIC)
+
+   on:
+     schedule:
+       - cron: "17 7 * * *"   # todos los días 07:17 UTC = 04:17 Argentina
+     workflow_dispatch:
+
+   permissions:
+     contents: write
+
+   jobs:
+     build:
+       runs-on: ubuntu-latest
+       steps:
+         - uses: actions/checkout@v4
+
+         - uses: actions/setup-python@v5
+           with:
+             python-version: "3.12"
+
+         - name: Generar listas
+           run: python lacnic2rsc.py --countries AR --outdir output
+
+         - name: Commit si hubo cambios
+           run: |
+             git config user.name "github-actions[bot]"
+             git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+             git add output/
+             if git diff --cached --quiet; then
+               echo "Sin cambios"
+             else
+               git commit -m "Listas GeoIP $(date -u +%F)"
+               git push
+             fi
