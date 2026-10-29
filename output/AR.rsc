@@ -1,4 +1,4 @@
-# AR (ipv4) generado 2026-10-28 08:10 UTC
+# AR (ipv4) generado 2026-10-29 08:13 UTC
 # Fuente: https://ftp.lacnic.net/pub/stats/lacnic/delegated-lacnic-extended-latest
 # Prefijos: 1601
 /ip firewall address-list remove [find list="AR-new"]
@@ -1606,4 +1606,4 @@ add list="AR-new" address=209.99.224.0/20 comment="AR LACNIC"
 add list="AR-new" address=216.244.192.0/18 comment="AR LACNIC"
 /ip firewall address-list remove [find list="AR"]
 /ip firewall address-list set [find list="AR-new"] list="AR"
-:log info "AR: 1601 prefijos cargados (lista del 2026-10-28 08:10 UTC)"
+:log info "AR: 1601 prefijos cargados (lista del 2026-10-29 08:13 UTC)"
