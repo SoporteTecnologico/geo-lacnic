@@ -1,2 +1,2 @@
-2026-10-31 08:00 UTC
+2026-11-01 08:08 UTC
 https://ftp.lacnic.net/pub/stats/lacnic/delegated-lacnic-extended-latest
