@@ -1,6 +1,6 @@
-# AR (ipv4) generado 2026-11-04 08:25 UTC
+# AR (ipv4) generado 2026-11-05 08:26 UTC
 # Fuente: https://ftp.lacnic.net/pub/stats/lacnic/delegated-lacnic-extended-latest
-# Prefijos: 1601
+# Prefijos: 1603
 /ip firewall address-list remove [find list="AR-new"]
 /ip firewall address-list
 add list="AR-new" address=24.152.57.0/24 comment="AR LACNIC"
@@ -1521,7 +1521,9 @@ add list="AR-new" address=200.123.32.0/22 comment="AR LACNIC"
 add list="AR-new" address=200.123.41.0/24 comment="AR LACNIC"
 add list="AR-new" address=200.123.45.0/24 comment="AR LACNIC"
 add list="AR-new" address=200.123.46.0/23 comment="AR LACNIC"
-add list="AR-new" address=200.123.48.0/21 comment="AR LACNIC"
+add list="AR-new" address=200.123.48.0/23 comment="AR LACNIC"
+add list="AR-new" address=200.123.50.0/24 comment="AR LACNIC"
+add list="AR-new" address=200.123.52.0/22 comment="AR LACNIC"
 add list="AR-new" address=200.123.56.0/23 comment="AR LACNIC"
 add list="AR-new" address=200.123.58.0/24 comment="AR LACNIC"
 add list="AR-new" address=200.123.60.0/24 comment="AR LACNIC"
@@ -1606,4 +1608,4 @@ add list="AR-new" address=209.99.224.0/20 comment="AR LACNIC"
 add list="AR-new" address=216.244.192.0/18 comment="AR LACNIC"
 /ip firewall address-list remove [find list="AR"]
 /ip firewall address-list set [find list="AR-new"] list="AR"
-:log info "AR: 1601 prefijos cargados (lista del 2026-11-04 08:25 UTC)"
+:log info "AR: 1603 prefijos cargados (lista del 2026-11-05 08:26 UTC)"
